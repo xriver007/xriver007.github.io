@@ -1,0 +1,42 @@
+[{
+    "title": "Off-the-Grid Recovery of Piecewise Constant Images from Few Fourier Samples",
+    "authors": "<b>G. Ongie</b> &amp; M. Jacob",
+    "journal": "SIAM Journal on Imaging Sciences",
+    "type": "journal",
+    "year": 2016,
+    "url": "http://epubs.siam.org/doi/abs/10.1137/15M1042280?journalCode=sjisbi",
+    "code": "",
+    "tags": [],
+    "bibtex": "@article{ongie2016offthegrid,\n  title={Off-the-Grid Recovery of Piecewise Constant Images from Few Fourier Samples},\n  author={Ongie, Greg and Jacob, Mathews},\n  journal={SIAM Journal on Imaging Sciences},\n  volume={9},\n  number={3},\n  pages={1004–1041},\n  year={2016},\n  publisher={SIAM}\n}"
+},
+{
+    "title": "Recovery of Discontinuous Signals Using Group Sparse Higher Degree Total Variation",
+    "authors": "<b>G. Ongie</b> &amp; M. Jacob",
+    "journal": "IEEE Signal Processing Letters",
+    "type": "journal",
+    "year": 2015,
+    "url": "http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=7050343",
+    "code": "",
+    "tags": [],
+    "bibtex": "@article{ongie2015recovery,\n  title={Recovery of Discontinuous Signals Using Group Sparse Higher Degree Total Variation},\n  author={Ongie, Greg and Jacob, Mathews},\n  journal={Signal Processing Letters, IEEE},\n  volume={22},\n  number={9},\n  pages={1414--1418},\n  year={2015},\n  publisher={IEEE}\n}"
+},
+{
+    "title": "Iterative Shrinkage Algorithm for Patch Smoothness Regularized Medical Image Recovery",
+    "authors": "Y. Moshin, <b>G. Ongie</b>, M. Jacob",
+    "journal": "IEEE Transactions on Medical Imaging",
+    "type": "journal",
+    "year": 2014,
+    "url": "",
+    "code": "",
+    "tags": []
+},
+{
+    "title": "Generalized Higher Degree Total Variation",
+    "authors": "<b>G. Ongie</b>, Y. Hu, S. Ramani, M. Jacob",
+    "journal": "IEEE Transactions on Image Processing",
+    "type": "journal",
+    "year": 2014,
+    "url": "",
+    "code": "",
+    "tags": []
+}]

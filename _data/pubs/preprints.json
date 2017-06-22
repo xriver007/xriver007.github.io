@@ -1,0 +1,31 @@
+[
+{
+    "title": "Algebraic Variety Models for High-Rank Matrix Completion",
+    "authors": "<b>G. Ongie</b>, R. Willett, R. Nowak, L. Balzano",
+    "journal": "TBA",
+    "type": "conference",
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1703.09631",
+    "code": "",
+    "tags": []
+},
+{
+    "title": "Convex Recovery of Continuous Domain Piecewise Constant Images from Non-Uniform Fourier samples",
+    "authors": "<b>G. Ongie</b>, S. Biswas, M. Jacob",
+    "journal": "Submitted to IEEE TSP",
+    "type": "journal",
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1703.01405",
+    "code": "",
+    "tags": []
+},
+{
+    "title": "A Fast Algorithm for Convolutional Structured Low-rank Matrix Recovery",
+    "authors": "<b>G. Ongie</b> &amp; M. Jacob",
+    "journal": "Submitted to IEEE TCI",
+    "type": "journal",
+    "year": 2016,
+    "url": "https://arxiv.org/abs/1609.07429",
+    "code": "",
+    "tags": []
+}]

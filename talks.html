@@ -1,0 +1,43 @@
+---
+title: Talks
+header: Talks
+byline: 
+layout: default
+---
+<h2>Conference Talks</h2>
+<ul>
+{% for member in site.data.talks.conference %}
+  <li>
+    <a href="#">
+    <b>{{ member.title }}</b>.
+    </a>
+    <br>
+    {{member.venue}}. {{member.year}}. Slides:
+    {% if member.pdf %}
+    <a href="{{site.baseurl}}/files/talks/{{member.pdf}}">(pdf)</a>
+    {% endif %}    
+    {% if member.ppt %}
+    <a href="{{site.baseurl}}/files/talks/{{member.ppt}}">(ppt)</a>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
+
+<h2>Invited Talks</h2>
+<ul>
+{% for member in site.data.talks.invited %}
+  <li>
+    <a href="#">
+    <b>{{ member.title }}</b>.
+    </a>
+    <br>
+    {{member.venue}}. {{member.series}}. {{member.year}}. Slides:
+    {% if member.pdf %}
+    <a href="{{site.baseurl}}/files/talks/{{member.pdf}}">(pdf)</a>
+    {% endif %}    
+    {% if member.ppt %}
+    <a href="{{site.baseurl}}/files/talks/{{member.ppt}}">(ppt)</a>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>

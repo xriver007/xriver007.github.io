@@ -1,0 +1,102 @@
+---
+title: Publications
+header: Publications
+byline: 
+layout: default
+---
+<h4><a href="https://scholar.google.com/citations?user=uhhWy2YAAAAJ">Google Scholar Page</a></h4>
+<h4><a href="http://arxiv.org/find/cs/1/au:+Ongie_G/0/1/0/all/0/1">arXiv.org Pre-prints</a></h4>
+<h2>Pre-prints</h2>
+<ul>
+{% for member in site.data.pubs.preprints %}
+  <li>
+    <a href="{{ member.url }}">
+    <b>{{ member.title }}</b>.
+    </a>
+  </br>
+    {{member.authors}}. {{member.journal}}. {{member.year}}.
+    {% if member.bibtex %}
+    <a href="#" class="biblink" data-bib="{{member.bibtex | escape}}">(bib)</a>
+    {% endif %}
+    {% if member.pdf %}
+    <a href="{{member.pdf}}">(pdf)</a>
+    {% endif %}    
+    {% for tag in member.tags %}
+    <span class="label label-info">{{tag}}</span>
+    {% endfor %}
+  </li>
+{% endfor %}
+</ul>
+
+<h2>Journal Papers</h2>
+<ul>
+{% for member in site.data.pubs.journal %}
+  <li>
+    <a href="{{ member.url }}">
+    <b>{{ member.title }}</b>.
+    </a>
+  </br>
+    {{member.authors}}. {{member.journal}}. {{member.year}}.
+    {% if member.bibtex %}
+    <a href="#" class="biblink" data-bib="{{member.bibtex | escape}}">(bib)</a>
+    {% endif %}
+    {% if member.pdf %}
+    <a href="{{member.pdf}}">(pdf)</a>
+    {% endif %}    
+    {% for tag in member.tags %}
+    <span class="label label-info">{{tag}}</span>
+    {% endfor %}
+  </li>
+{% endfor %}
+</ul>
+
+<h2>Conference Papers</h2>
+<ul>
+{% for member in site.data.pubs.conference %}
+  <li>
+    <a href="{{ member.url }}">
+    <b>{{ member.title }}</b>.
+    </a>
+  </br>    
+    {{member.authors}}. {{member.journal}}. {{member.year}}.
+    {% if member.bibtex %}
+    <a href="#" class="biblink" data-bib="{{member.bibtex | escape}}">(bib)</a>
+    {% endif %}
+    {% if member.pdf %}
+    <a href="{{member.pdf}}">(pdf)</a>
+    {% endif %}        
+    {% for tag in member.tags %}
+    <span class="label label-info">{{tag}}</span>
+    {% endfor %}    
+  </li>
+{% endfor %}
+</ul>
+
+<div class="modal fade" id="bibmodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+       <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Bibtex reference</h4>
+      </div>
+      <div class="modal-body">
+        <pre id="bibref"></pre>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+{% include footer1.html %}
+<script>
+$( function(){
+  $('.biblink').click( function(){
+    $('#bibref').html( $(this).attr('data-bib') );
+    $('#bibmodal').modal('show');
+  } );
+  $('#bibref').click( function(){ 
+    $(this).select();
+  } );
+} );
+</script>
+{% include footer2.html %}
+

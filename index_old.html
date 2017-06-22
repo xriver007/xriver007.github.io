@@ -1,0 +1,64 @@
+---
+title: Homepage
+header: Welcome
+byline: to Greg Ongie's Homepage
+layout: nobyline
+---
+
+<div class="row">    
+<br>
+<div class="col-md-4 col-sm-6 text-center">
+  <img src="images/profile.jpg" style="width:250px;height:250px" class="img-circle"><div class="text-left" style="width:70%;margin: 0 auto"><h3>Greg Ongie</h3><h4>PhD student<br>Department of Mathematics<br>University of Iowa<br>Iowa City, IA</h4><h4><strong>gregory-ongie<span style="display:none">foo</span>@uiowa.edu</strong><h4></div>
+</div>
+<div class="col-md-8 col-sm-6">
+
+  <div class="row">
+    <div class="col-xs-9">
+      <h3>About me:</h3>      
+      <p>I am a PhD student in the <a href="http://www.amcs.uiowa.edu/">applied math and computational sciences (AMCS) program</a> at the University of Iowa, and a research assistant in the <a href="http://research.engineering.uiowa.edu/cbig/">Computational Biomedical Imaging Group (CBIG)</a> led by my PhD advisor <a href="http://user.engineering.uiowa.edu/~jcb/">Prof. Mathews Jacob</a>.</p>
+      <p><a href="{{site.baseurl}}/files/misc/gregongie_cv.pdf"><strong>Current CV</strong></a> (Updated 4/17/2016)</p>
+      <h3>Research interests:</h3>
+      <p>Designing novel image priors for inverse problems in medical imaging, with specific focus on compressed sensing MRI reconstruction. I have published work on:
+        <ul>
+          <li>Off-the-grid signal and image recovery.</li>
+          <li>Finite-rate-of-innovation models.</li>
+          <li>Co-sparse analysis models.</li>
+          <li>Generalizations of total variation regularization.</li>          
+          <li>Non-convex approaches to large scale sparsity regularized optimization problems.</li>
+        </ul>
+      </p>
+      <ul class="list-inline">
+        <li><a href="{{site.baseurl}}/publications.html"><button class="btn btn-success">List of Publications</button></a></li>
+        <li><a href="https://scholar.google.com/citations?user=uhhWy2YAAAAJ"><button class="btn btn-warning">Google Scholar Page</button></a></li>
+        <li><a href="https://github.com/eeriegongs"><button class="btn btn-default">Github Account</button></a></li>        
+      </ul>      
+    </div>  
+  </div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-7">
+  <h1>News</h1>
+</div>
+</div> 
+{% for post in site.posts %}
+<hr>
+<div class="row">    
+<br>
+<div class="col-md-2 col-sm-3 text-center">
+  <a class="story-img" href="{{post.url}}"><img src="{{site.baseurl}}/images/{{post.image}}" style="width:100px;height:100px" class="img-circle"></a>
+</div>
+<div class="col-md-10 col-sm-9">
+  <h3>{{post.title}}</h3>      
+  <ul class="list-inline"><li><a href="{{post.url}}">{{post.date | date: "%B %e, %Y"}}</a></li></ul>  
+  <div class="row">
+    <div class="col-xs-9">
+      <p>{{post.excerpt}}</p>
+      <p class="lead"><a href="{{post.url}}"><button class="btn btn-info">Read More</button></a></p>
+      </div>
+    <div class="col-xs-3"></div>
+  </div>
+  <br><br>
+</div>
+</div>
+{% endfor %}

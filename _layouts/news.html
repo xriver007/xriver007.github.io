@@ -1,0 +1,50 @@
+{% include header1.html %}
+{% include header2.html %}
+{% include header3.html %}
+<div class="row">
+	<div class="col-md-2 col-sm-3 text-center">
+	  <img src="{{site.baseurl}}/images/{{page.image}}" style="width:100px;height:100px;margin-top:20px" class="img-circle">
+	</div>	
+	<div class="col-md-6">
+	<h2>
+		{{page.title}}
+	    <p><small class="text-default">Posted on {{page.date | date: '%B %d, %Y' }}</small></p>		
+	</h2>
+	<p>{{ content }}</p>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-md-8">
+		More Posts:<br>
+		{% if paginator.total_pages > 1 %}
+		<div class="pagination">
+		  {% if paginator.previous_page %}
+		    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+		  {% else %}
+		    <span>&laquo; Prev</span>
+		  {% endif %}
+
+		  {% for page in (1..paginator.total_pages) %}
+		    {% if page == paginator.page %}
+		      <em>{{ page }}</em>
+		    {% elsif page == 1 %}
+		      <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+		    {% else %}
+		      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+		    {% endif %}
+		  {% endfor %}
+
+		  {% if paginator.next_page %}
+		    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+		  {% else %}
+		    <span>Next &raquo;</span>
+		  {% endif %}
+		</div>
+		{% endif %}
+	</div>
+</div>
+
+
+{% include footer1.html %}
+{% include footer2.html %}

@@ -6,27 +6,6 @@ layout: default
 ---
 <h4><a href="">Google Scholar Page</a></h4>
 <h4><a href="">arXiv.org Pre-prints</a></h4>
-<h2>Pre-prints</h2>
-<ul>
-{% for member in site.data.pubs.preprints %}
-  <li>
-    <a href="{{ member.url }}">
-    <b>{{ member.title }}</b>.
-    </a>
-  </br>
-    {{member.authors}}. {{member.journal}}. {{member.year}}.
-    {% if member.bibtex %}
-    <a href="#" class="biblink" data-bib="{{member.bibtex | escape}}">(bib)</a>
-    {% endif %}
-    {% if member.pdf %}
-    <a href="{{member.pdf}}">(pdf)</a>
-    {% endif %}    
-    {% for tag in member.tags %}
-    <span class="label label-info">{{tag}}</span>
-    {% endfor %}
-  </li>
-{% endfor %}
-</ul>
 
 <h2>Journal Papers</h2>
 <ul>

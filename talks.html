@@ -42,3 +42,23 @@ layout: default
   </li>
 {% endfor %}
 </ul>
+
+<h2>Forum</h2>
+<ul>
+{% for member in site.data.talks.Others %}
+  <li>
+    <a href="#">
+    <b>{{ member.title }}</b>.
+    </a>
+    <br>
+    {{member.venue}}. {{member.series}}. {{member.year}}. Slides:
+    {% if member.pdf %}
+    <a href="{{site.baseurl}}/files/talks/{{member.pdf}}">(pdf)</a>
+    {% endif %}    
+    {% if member.ppt %}
+    <a href="{{site.baseurl}}/files/talks/{{member.ppt}}">(ppt)</a>
+    {% endif %}
+    <b>{{ member.tags }}</b>.
+  </li>
+{% endfor %}
+</ul>
